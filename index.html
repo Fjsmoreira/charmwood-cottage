@@ -8,74 +8,81 @@
   <meta property="og:title" content="Charmwood Cottage — private polder retreat" />
   <meta property="og:description" content="A relaxed detached cottage surrounded by greenery in Eemnes, Netherlands." />
   <meta property="og:image" content="/assets/hero.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <style>
     :root{
-      --moss:#5a3422; --moss-2:#3a2116; --fern:#8a5a35; --sage:#ead9c3; --cream:#f7efe3; --paper:#fff8ee;
-      --bark:#3f2418; --clay:#a5673c; --sun:#d9a85c; --ink:#2d2119; --muted:#746254; --line:rgba(90,52,34,.18);
-      --shadow:0 24px 70px rgba(80,45,28,.18); --soft-shadow:0 12px 38px rgba(80,45,28,.12); --radius:28px;
+      --soil:#31231b;
+      --bark:#5b3b2b;
+      --cedar:#8b5b3a;
+      --copper:#b8794b;
+      --wheat:#e7cfac;
+      --linen:#f5efe5;
+      --paper:#fffaf2;
+      --mist:#ede3d6;
+      --ink:#2b2520;
+      --muted:#62574e;
+      --line:rgba(49,35,27,.14);
+      --shadow:0 18px 45px rgba(49,35,27,.12);
+      --radius:18px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;text-rendering:optimizeLegibility}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.72;background:radial-gradient(circle at 12% 8%,rgba(217,168,92,.25),transparent 28%),radial-gradient(circle at 92% 5%,rgba(138,90,53,.20),transparent 24%),linear-gradient(120deg,rgba(90,52,34,.07),transparent 42%),repeating-linear-gradient(105deg,rgba(90,52,34,.025) 0 1px,transparent 1px 14px)}
-    img{max-width:100%;display:block} a{color:inherit}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.sr-only{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
-    :focus-visible{outline:3px solid #f0c36f;outline-offset:4px;border-radius:14px}
+    html{scroll-behavior:smooth;background:var(--linen)}
+    body{margin:0;font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fffaf2 0%,#f5efe5 42%,#efe3d4 100%);line-height:1.55;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%} a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}.sr-only{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}:focus-visible{outline:3px solid #d8a35f;outline-offset:4px;border-radius:10px}
 
-    .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;width:min(1010px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 18px;border:1px solid rgba(255,255,255,.50);border-radius:999px;background:rgba(247,239,227,.86);backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(80,45,28,.14)}
-    .brand{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-weight:800;text-decoration:none;color:var(--moss)}
-    .leaf{width:27px;height:27px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#d9a85c 0 12%,transparent 13%),conic-gradient(from 35deg,#6a3f29,#a5673c,#5a3422,#c1844e,#6a3f29);box-shadow:inset 0 0 0 3px rgba(255,248,238,.45),0 2px 8px rgba(90,52,34,.22)}
-    .navlinks{display:flex;gap:4px;align-items:center}.navlinks a{padding:9px 12px;text-decoration:none;color:#6c503c;font-size:14px;font-weight:650}.navlinks a:hover{color:var(--moss);background:rgba(90,52,34,.08);border-radius:999px}
-    .pill{display:inline-flex;min-height:44px;align-items:center;justify-content:center;border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:800;border:1px solid var(--moss);background:linear-gradient(180deg,#6f4129,var(--moss));color:var(--cream);box-shadow:0 12px 30px rgba(80,45,28,.24);transition:transform .18s ease,box-shadow .18s ease,background .18s ease}.pill:hover{transform:translateY(-1px);background:linear-gradient(180deg,#5a3422,var(--moss-2));box-shadow:0 16px 34px rgba(80,45,28,.29)}.pill.light{background:rgba(255,248,238,.90);color:var(--moss);border-color:rgba(255,248,238,.78)}.pill.light:hover{background:var(--paper)}.navlinks a.pill{color:var(--cream);padding:11px 17px}.pill.ghost{background:transparent;color:var(--moss);border-color:rgba(90,52,34,.28);box-shadow:none}.pill.ghost:hover{background:rgba(90,52,34,.07)}
+    .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(980px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 10px 9px 16px;border:1px solid rgba(49,35,27,.10);border-radius:999px;background:rgba(255,250,242,.88);backdrop-filter:blur(16px);box-shadow:0 10px 30px rgba(49,35,27,.10)}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.02em;color:var(--soil)}
+    .brand-mark{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--soil),var(--cedar));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+    .brand-mark:after{content:"";position:absolute;left:8px;top:5px;width:8px;height:14px;border-radius:50%;border:1.6px solid rgba(255,250,242,.86);transform:rotate(28deg)}
+    .navlinks{display:flex;align-items:center;gap:2px}.navlinks a{min-height:40px;display:inline-flex;align-items:center;padding:9px 12px;border-radius:999px;text-decoration:none;color:#615348;font-size:14px;font-weight:600}.navlinks a:hover{background:rgba(49,35,27,.06);color:var(--soil)}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:700;border:1px solid transparent;background:var(--soil);color:var(--paper);box-shadow:0 12px 28px rgba(49,35,27,.18);transition:transform .16s ease,box-shadow .16s ease,background .16s ease}.button:hover{transform:translateY(-1px);background:#1f1712;box-shadow:0 16px 32px rgba(49,35,27,.22)}.button.secondary{background:rgba(255,250,242,.92);color:var(--soil);border-color:rgba(49,35,27,.14);box-shadow:none}.button.secondary:hover{background:#fff}.navlinks .button{color:var(--paper);padding-inline:16px}
 
-    .hero{position:relative;min-height:96svh;display:grid;align-items:end;padding:120px 0 36px;overflow:hidden;background:#3a2116}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(58,33,22,.78),rgba(74,44,28,.46) 48%,rgba(74,44,28,.18)),linear-gradient(180deg,rgba(58,33,22,.12),rgba(58,33,22,.78));z-index:0}.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:saturate(.84) sepia(.13) contrast(1.05) brightness(.94)}.hero .wrap{position:relative;z-index:1}
-    .hero-layout{display:grid;grid-template-columns:minmax(0,760px) minmax(240px,360px);gap:26px;align-items:end}.hero-card{color:var(--paper);padding:34px;border-radius:calc(var(--radius) + 10px);background:linear-gradient(135deg,rgba(72,42,27,.82),rgba(72,42,27,.44));border:1px solid rgba(255,248,238,.25);backdrop-filter:blur(9px);box-shadow:0 30px 90px rgba(45,26,17,.30)}
-    .eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:13px;font-weight:900;color:#ffe2a0;text-shadow:0 1px 10px rgba(45,26,17,.35)}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7.7vw,92px);line-height:.92;margin:14px 0 18px;text-wrap:balance}.hero p{font-size:clamp(17px,2vw,21px);max-width:670px;margin:0 0 24px;color:#fff3dc}.cta-row{display:flex;flex-wrap:wrap;gap:12px}.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.quick div{padding:13px 14px;border-radius:18px;background:rgba(255,248,238,.16);border:1px solid rgba(255,255,255,.24)}.quick b{display:block;font-size:23px;color:#fff;line-height:1}.quick span{font-size:13px;color:#ffe7bd;font-weight:650}
-    .booking-card{padding:20px;border-radius:26px;background:rgba(255,250,241,.92);border:1px solid rgba(255,255,255,.52);box-shadow:0 20px 60px rgba(0,0,0,.22);color:var(--ink)}.booking-card b{display:block;font-family:Georgia,serif;color:var(--moss);font-size:23px;margin-bottom:8px}.booking-list{display:grid;gap:10px;margin:16px 0}.booking-list span{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid rgba(90,52,34,.14);padding-bottom:8px;color:var(--muted)}.booking-list strong{color:var(--ink)}.booking-card .pill{width:100%}.note{font-size:13px;color:#6b5748;margin:12px 0 0;text-align:center}.hero .booking-card .note{color:#6b5748}
+    .hero{position:relative;min-height:92svh;display:grid;align-items:end;overflow:hidden;background:var(--soil);padding:118px 0 34px}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.03) brightness(.90)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,15,11,.76) 0%,rgba(22,15,11,.54) 40%,rgba(22,15,11,.18) 72%),linear-gradient(180deg,rgba(22,15,11,.04) 40%,rgba(22,15,11,.70) 100%)}.hero .wrap{position:relative;z-index:1}.hero-grid{display:grid;grid-template-columns:minmax(0,700px) 328px;gap:28px;align-items:end}.hero-copy{color:var(--paper);max-width:720px}.eyebrow{margin:0 0 14px;color:var(--wheat);font-size:13px;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.hero h1{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.045em;font-size:clamp(46px,8vw,88px);line-height:.96;margin:0 0 18px;max-width:760px;text-wrap:balance}.hero p{font-size:clamp(17px,2vw,21px);line-height:1.48;color:#f3e7d6;max-width:630px;margin:0 0 26px}.cta-row{display:flex;flex-wrap:wrap;gap:12px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:30px;max-width:690px;border:1px solid rgba(255,250,242,.20);background:rgba(255,250,242,.16);border-radius:18px;overflow:hidden}.fact{padding:16px 17px;background:rgba(49,35,27,.22);backdrop-filter:blur(8px)}.fact b{display:block;color:#fff;font-size:22px;line-height:1.1;letter-spacing:-.03em}.fact span{display:block;margin-top:3px;color:#ead6bd;font-size:13px;font-weight:600}
+    .booking-card{background:rgba(255,250,242,.95);border:1px solid rgba(255,255,255,.70);border-radius:22px;padding:22px;box-shadow:var(--shadow)}.booking-card h2{font-family:"Fraunces",Georgia,serif;letter-spacing:-.03em;font-size:28px;line-height:1.05;color:var(--soil);margin:0 0 8px}.note{font-size:13px;color:#54483f;margin:12px 0 0}.hero .booking-card p.note{color:#54483f;font-size:13px;line-height:1.45;margin:12px 0 0}.booking-list{display:grid;gap:0;margin:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.booking-list span{display:flex;justify-content:space-between;gap:16px;padding:11px 0;color:var(--muted);font-size:14px}.booking-list span+span{border-top:1px solid var(--line)}.booking-list strong{color:var(--ink);font-weight:700;text-align:right}.booking-card .button{width:100%}
 
-    section{padding:82px 0}.intro{padding:56px 0 26px}.trust-strip{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:14px;align-items:stretch}.trust-item{padding:18px 20px;border-radius:24px;background:rgba(255,250,241,.78);border:1px solid var(--line);box-shadow:var(--soft-shadow)}.trust-item:first-child{background:var(--moss);color:var(--cream)}.trust-item b{display:block;color:inherit;font-size:18px}.trust-item span{color:var(--muted);font-size:14px}.trust-item:first-child span{color:#f1dfc8}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}.kicker{font-family:Georgia,serif;color:var(--clay);font-style:italic;font-size:23px;margin:0 0 8px}.h2{font-family:Georgia,serif;font-size:clamp(34px,5vw,62px);line-height:1;margin:0 0 20px;color:var(--moss);text-wrap:balance}.lead{font-size:19px;color:#5f4939}.card{background:rgba(255,250,241,.80);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.card.pad{padding:30px}.ribbon{display:inline-flex;gap:10px;align-items:center;background:#fff1d5;border:1px solid rgba(169,102,67,.25);color:var(--bark);border-radius:999px;padding:9px 14px;font-weight:850;margin:16px 0}
-    .photo-stack{position:relative;min-height:540px}.photo-stack img{position:absolute;object-fit:cover;border-radius:28px;box-shadow:var(--shadow);border:8px solid var(--paper);background:var(--sage)}.photo-stack img:nth-child(1){width:75%;height:390px;left:0;top:0}.photo-stack img:nth-child(2){width:55%;height:330px;right:0;bottom:0}.photo-stack img:nth-child(3){width:34%;height:210px;right:12%;top:56px}
-    .details{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.detail{padding:18px 20px;border-radius:20px;border:1px dashed rgba(90,52,34,.26);background:rgba(255,250,241,.58)}.detail b{color:var(--moss)}
-    .gallery{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:280px 280px;gap:16px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:26px}.gallery img:first-child{grid-row:span 2}
-    .section-head{max-width:760px;margin-bottom:28px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:24px;min-height:190px;border-radius:24px;background:linear-gradient(180deg,#fff8ee,#f3e2ca);border:1px solid var(--line);transition:transform .18s ease,box-shadow .18s ease}.feature:hover{transform:translateY(-3px);box-shadow:var(--soft-shadow)}.feature svg{width:34px;height:34px;color:var(--fern)}.feature h3{margin:14px 0 8px;color:var(--moss);font-size:22px}.feature p{margin:0;color:var(--muted)}
-    .area{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.area-card{padding:24px;border-radius:26px;background:rgba(255,250,241,.78);border:1px solid var(--line)}.area-card b{color:var(--moss)}.timeline{display:grid;gap:14px}.timeline div{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:18px;border-radius:22px;background:var(--paper);border:1px solid var(--line)}.timeline strong{color:var(--clay)}
-    .reviews{display:grid;grid-template-columns:1fr 1fr;gap:18px}.review{padding:24px;border-radius:24px;background:#fff8ee;border:1px solid var(--line);box-shadow:0 8px 28px rgba(90,52,34,.08)}.review p{margin:0 0 15px}.stars{color:#b98234;letter-spacing:2px}.quote-large{font-family:Georgia,serif;font-size:clamp(34px,5vw,64px);line-height:1;color:var(--moss);margin:0 0 16px;text-wrap:balance}
-    .contact{background:var(--moss);color:var(--cream);border-radius:42px;padding:46px;display:grid;grid-template-columns:1fr .75fr;gap:32px;align-items:center;position:relative;overflow:hidden}.contact:before{content:"";position:absolute;inset:auto -80px -150px auto;width:360px;height:360px;border-radius:50%;background:rgba(223,179,94,.18)}.contact .h2{color:var(--cream)}.contact p{color:#f1dfc8}.contact-box{position:relative;background:rgba(255,250,241,.09);border:1px solid rgba(255,255,255,.15);border-radius:28px;padding:24px}.contact .kicker{color:#f5d993}.contact .pill.light{border-color:transparent}
-    footer{padding:42px 0;color:var(--muted)}
+    section{padding:86px 0}.intro{padding:36px 0 18px}.trust-strip{display:grid;grid-template-columns:1.15fr repeat(3,1fr);gap:12px}.trust-item{padding:20px;border-radius:var(--radius);background:rgba(255,250,242,.78);border:1px solid var(--line)}.trust-item:first-child{background:var(--soil);color:var(--paper)}.trust-item b{display:block;font-size:17px;letter-spacing:-.02em}.trust-item span{display:block;margin-top:4px;color:var(--muted);font-size:14px}.trust-item:first-child span{color:#dfcfbb}
+    .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,1fr);gap:56px;align-items:center}.kicker{margin:0 0 10px;color:var(--cedar);font-weight:700;font-size:14px;letter-spacing:.10em;text-transform:uppercase}.h2{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.045em;font-size:clamp(35px,5.3vw,62px);line-height:1.02;margin:0 0 20px;color:var(--soil);text-wrap:balance}.lead{font-size:18px;line-height:1.7;color:#5d5148;margin:0 0 22px}.small-copy{color:var(--muted);font-size:15px}.ribbon{display:inline-flex;align-items:center;gap:8px;margin:3px 0 22px;padding:8px 12px;border:1px solid rgba(139,91,58,.22);border-radius:999px;background:#fff6e8;color:#4e382b;font-weight:700;font-size:14px}.details{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.detail{padding:16px;border-radius:16px;background:rgba(255,250,242,.72);border:1px solid var(--line)}.detail b{display:block;color:var(--soil);margin-bottom:4px}.photo-pair{display:grid;grid-template-columns:1fr .78fr;gap:14px;align-items:end}.photo-pair img{width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--shadow);background:var(--mist)}.photo-pair img:first-child{height:520px}.photo-pair img:last-child{height:360px;margin-bottom:34px}
+    .card{background:rgba(255,250,242,.82);border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 38px rgba(49,35,27,.08);overflow:hidden}.card.pad{padding:32px}.gallery{display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:270px 270px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:20px}.gallery img:first-child{grid-row:span 2}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.section-head .h2{margin-bottom:0;max-width:720px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{padding:22px;border-radius:18px;background:rgba(255,250,242,.78);border:1px solid var(--line);min-height:170px}.feature .number{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:50%;background:var(--mist);color:var(--bark);font-size:13px;font-weight:800}.feature h3{margin:18px 0 8px;color:var(--soil);font-size:20px;letter-spacing:-.02em}.feature p{margin:0;color:var(--muted);font-size:15px}
+    .area{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}.area-card{padding:28px;border-radius:22px;background:rgba(255,250,242,.78);border:1px solid var(--line)}.timeline{display:grid;gap:10px}.timeline div{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:18px 20px;border-radius:18px;background:rgba(255,250,242,.78);border:1px solid var(--line)}.timeline strong{color:var(--cedar)}
+    .reviews{display:grid;grid-template-columns:1fr 1fr;gap:12px}.review{padding:21px;border-radius:18px;background:#fffaf2;border:1px solid var(--line)}.review p{margin:0 0 14px;color:#4f453e}.stars{color:#a86837;letter-spacing:1px;font-size:13px;margin-bottom:10px}.quote-large{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.045em;font-size:clamp(38px,5.2vw,66px);line-height:1;color:var(--soil);margin:0 0 18px;text-wrap:balance}
+    .contact{background:var(--soil);color:var(--paper);border-radius:28px;padding:42px;display:grid;grid-template-columns:1fr .72fr;gap:36px;align-items:center}.contact .h2{color:var(--paper)}.contact .lead,.contact p{color:#e5d6c5}.contact .kicker{color:var(--wheat)}.contact-box{background:rgba(255,250,242,.08);border:1px solid rgba(255,250,242,.16);border-radius:22px;padding:24px}.contact-box b{color:#fff}footer{padding:42px 0;color:var(--muted);font-size:14px}
 
-    @media(max-width:920px){.hero-layout,.split,.area,.contact{grid-template-columns:1fr}.booking-card{max-width:520px}.trust-strip{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:680px){.wrap{width:min(100% - 26px,1160px)}.nav{top:8px;padding:8px 9px 8px 13px}.navlinks a:not(.pill){display:none}.brand span:last-child{font-size:16px}.hero{min-height:auto;padding:104px 0 22px}.hero-card{padding:22px;border-radius:28px}.hero h1{font-size:clamp(42px,14vw,64px)}.quick{grid-template-columns:1fr 1fr}.trust-strip,.feature-grid,.reviews,.details{grid-template-columns:1fr}.photo-stack{min-height:390px}.photo-stack img:nth-child(1){width:82%;height:265px}.photo-stack img:nth-child(2){width:64%;height:230px}.photo-stack img:nth-child(3){display:none}.gallery{grid-template-columns:1fr;grid-template-rows:auto}.gallery img,.gallery img:first-child{height:290px;grid-row:auto}.timeline div{grid-template-columns:1fr;gap:4px}.contact{padding:28px;border-radius:30px}section{padding:64px 0}.intro{padding:28px 0 10px}}
+    @media(max-width:930px){.hero-grid,.split,.area,.contact{grid-template-columns:1fr}.booking-card{max-width:520px}.trust-strip{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.photo-pair img:first-child{height:410px}.photo-pair img:last-child{height:300px}}
+    @media(max-width:680px){.wrap{width:min(100% - 26px,1120px)}.nav{top:8px}.navlinks a:not(.button){display:none}.brand span:last-child{font-size:16px}.hero{min-height:auto;padding:104px 0 24px}.hero h1{font-size:clamp(42px,14vw,62px)}.facts{grid-template-columns:1fr 1fr}.trust-strip,.feature-grid,.reviews,.details{grid-template-columns:1fr}.photo-pair{grid-template-columns:1fr}.photo-pair img:first-child,.photo-pair img:last-child{height:300px;margin:0}.gallery{grid-template-columns:1fr;grid-template-rows:auto}.gallery img,.gallery img:first-child{height:285px;grid-row:auto}.timeline div{grid-template-columns:1fr;gap:3px}.contact{padding:28px;border-radius:22px}section{padding:64px 0}.intro{padding:26px 0 8px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
   </style>
 </head>
 <body>
   <a class="sr-only" href="#main">Skip to content</a>
   <nav class="nav" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="Charmwood home"><span class="leaf"></span><span>Charmwood</span></a>
-    <div class="navlinks"><a href="#stay">The stay</a><a href="#garden">Garden</a><a href="#reviews">Reviews</a><a class="pill" href="#contact">Book</a></div>
+    <a class="brand" href="#top" aria-label="Charmwood home"><span class="brand-mark"></span><span>Charmwood</span></a>
+    <div class="navlinks"><a href="#stay">The stay</a><a href="#garden">Garden</a><a href="#reviews">Reviews</a><a class="button" href="#contact">Book</a></div>
   </nav>
 
   <header class="hero" id="top">
-    <img src="assets/hero.jpeg" alt="Charmwood cottage surrounded by greenery" fetchpriority="high">
-    <div class="wrap hero-layout">
-      <div class="hero-card">
-        <div class="eyebrow">Private cottage · Eemnes, Netherlands</div>
-        <h1>A soft little hideaway in the polder.</h1>
-        <p>Charmwood is a relaxed detached cottage wrapped in greenery, firewood, candlelight and big Dutch skies — peaceful, private, and made for slow mornings.</p>
-        <div class="cta-row"><a class="pill" href="https://www.airbnb.co.uk/rooms/37307562" target="_blank" rel="noopener">Check availability on Airbnb</a><a class="pill light" href="#stay">Wander through the cottage</a></div>
-        <div class="quick" aria-label="Key facts"><div><b>4</b><span>guests max</span></div><div><b>90m²</b><span>private cottage</span></div><div><b>1500m²</b><span>fenced garden</span></div><div><b>4.95</b><span>80 reviews</span></div></div>
+    <img class="hero-image" src="assets/hero.jpeg" alt="Charmwood cottage surrounded by greenery" fetchpriority="high">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Private cottage · Eemnes, Netherlands</p>
+        <h1>A calm cottage on the edge of the polder.</h1>
+        <p>Detached and private, with two fireplaces, a fenced 1500m² garden and bikes for the dike roads — a simple 90m² retreat with wide Dutch skies.</p>
+        <div class="cta-row"><a class="button" href="https://www.airbnb.co.uk/rooms/37307562" target="_blank" rel="noopener">Check availability</a><a class="button secondary" href="#stay">Explore the stay</a></div>
+        <div class="facts" aria-label="Key facts"><div class="fact"><b>4</b><span>guests</span></div><div class="fact"><b>90m²</b><span>private cottage</span></div><div class="fact"><b>1500m²</b><span>fenced garden</span></div><div class="fact"><b>4.95</b><span>80 reviews</span></div></div>
       </div>
       <aside class="booking-card" aria-label="Booking summary">
-        <b>Guest favourite</b>
-        <p class="note" style="text-align:left;margin:0">Top 10% of eligible Airbnb homes, hosted by Rose.</p>
+        <h2>Guest favourite</h2>
+        <p class="note" style="margin:0">Top 10% of eligible Airbnb homes, hosted by Rose.</p>
         <div class="booking-list">
           <span>Stay <strong>Studio cabin</strong></span>
           <span>Setting <strong>Private polder garden</strong></span>
           <span>Dogs <strong>Welcome, max 2</strong></span>
           <span>Check-in <strong>Self check-in</strong></span>
         </div>
-        <a class="pill" href="https://www.airbnb.co.uk/rooms/37307562" target="_blank" rel="noopener">Reserve dates</a>
-        <p class="note">Direct contact details can be added later.</p>
+        <a class="button" href="https://www.airbnb.co.uk/rooms/37307562" target="_blank" rel="noopener">Reserve dates on Airbnb</a>
+        <p class="note">Reservations are handled securely through Airbnb.</p>
       </aside>
     </div>
   </header>
@@ -93,43 +100,43 @@
     <section id="stay">
       <div class="wrap split">
         <div>
-          <p class="kicker">Warm wood, soft linen, and room to breathe.</p>
-          <h2 class="h2">A cottage made for firelight evenings and quiet mornings.</h2>
-          <p class="lead">Inside: a calm studio-style retreat with a bedroom area, cosy fireplaces in the living room and bedroom, an open kitchen with Nespresso, Smeg kettle, oven and dishwasher, plus everything needed for an easy meal.</p>
-          <div class="ribbon">★ Guest favourite · top 10% of homes on Airbnb</div>
+          <p class="kicker">The stay</p>
+          <h2 class="h2">A quiet studio cottage with two fireplaces and garden views.</h2>
+          <p class="lead">Inside is a calm studio-style retreat with a bedroom area, fireplaces in the living room and bedroom, and an open kitchen with Nespresso, Smeg kettle, oven and dishwasher.</p>
+          <div class="ribbon">Guest favourite · top 10% of homes on Airbnb</div>
           <div class="details">
-            <div class="detail"><b>Sleeps</b><br>Double bed, single guest bed, and optional living-room bed behind linen curtains.</div>
-            <div class="detail"><b>Family-friendly</b><br>Baby cot and high chair can be arranged on request.</div>
-            <div class="detail"><b>Dog-friendly</b><br>Up to 2 dogs welcome; the garden is fully fenced.</div>
-            <div class="detail"><b>Self check-in</b><br>Arrive easily with lockbox access.</div>
+            <div class="detail"><b>Sleeps</b>Double bed, single guest bed, and optional living-room bed behind linen curtains.</div>
+            <div class="detail"><b>Family-friendly</b>Baby cot and high chair can be arranged on request.</div>
+            <div class="detail"><b>Dog-friendly</b>Up to 2 dogs welcome; the garden is fully fenced.</div>
+            <div class="detail"><b>Self check-in</b>Arrive easily with lockbox access.</div>
           </div>
         </div>
-        <div class="photo-stack" aria-label="Photos of Charmwood"><img src="assets/garden-light.jpeg" alt="Sunlit Charmwood garden"><img src="assets/fireplace.jpeg" alt="Cosy fireplace inside Charmwood"><img src="assets/sleeping.jpeg" alt="Bedroom area at Charmwood"></div>
+        <div class="photo-pair" aria-label="Photos of Charmwood"><img src="assets/garden-light.jpeg" alt="Sunlit Charmwood garden"><img src="assets/sleeping.jpeg" alt="Bedroom area at Charmwood"></div>
       </div>
     </section>
 
     <section id="garden">
       <div class="wrap split">
         <div class="card pad">
-          <p class="kicker">The outside is part of the stay.</p>
-          <h2 class="h2">A private garden for marshmallows, BBQs and muddy boots.</h2>
-          <p class="lead">French doors open to a large fenced garden on a private plot, surrounded by greenery. There is firewood ready, outdoor candles, warm plaids, bamboo sticks for marshmallows, a gas BBQ and a fire-pit tripod for cooking outside.</p>
-          <a class="pill ghost" href="#contact">See booking notes</a>
+          <p class="kicker">Garden and firelight</p>
+          <h2 class="h2">A private garden for slow mornings and long evenings.</h2>
+          <p class="lead">French doors open to a large fenced garden on a private plot. There is firewood ready, outdoor candles, warm plaids, bamboo sticks for marshmallows, a gas BBQ and a fire-pit tripod for cooking outside.</p>
+          <a class="button secondary" href="#contact">See booking notes</a>
         </div>
-        <div class="gallery"><img src="assets/woods-room.jpeg" alt="Cosy cottage interior"><img src="assets/kitchen.jpeg" alt="Cottage kitchen"><img src="assets/garden-light.jpeg" alt="Garden and cottage light"></div>
+        <div class="gallery"><img src="assets/woods-room.jpeg" alt="Cosy cottage interior"><img src="assets/kitchen.jpeg" alt="Cottage kitchen"><img src="assets/fireplace.jpeg" alt="Cosy fireplace inside Charmwood"></div>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <div class="section-head"><p class="kicker">What makes it special</p><h2 class="h2">Wooded charm, polder quiet.</h2></div>
+        <div class="section-head"><div><p class="kicker">What makes it special</p><h2 class="h2">Wooded charm, polder quiet.</h2></div><p class="small-copy">A restrained, practical snapshot of the things guests mention most.</p></div>
         <div class="feature-grid">
-          <article class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z"/><path d="M12 21V10"/></svg><h3>Walks from the door</h3><p>The protected bird breeding area begins in front of the house on the dike — best at sunrise or sunset.</p></article>
-          <article class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 18c4-6 10-8 14-14"/><path d="M7 8c3 0 5 1 6 4"/><path d="M6 17c3-1 5 0 7 2"/></svg><h3>Bikes waiting</h3><p>Cycle through forests, polders and wide heaths; restaurants in Laren and Blaricum are within cycling distance.</p></article>
-          <article class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 14c0-3 4-4 4-8 3 3 5 5 5 9a5 5 0 0 1-10 0c0-.5 0-.8.1-1.2"/></svg><h3>Cosy in every season</h3><p>Fireplaces, candles, blankets and plenty of firewood make winter stays feel especially warm.</p></article>
-          <article class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16"/><path d="M6 12V8a3 3 0 0 1 6 0v4"/><path d="M14 12V9a3 3 0 0 1 6 0v3"/><path d="M6 16h12"/></svg><h3>Private parking</h3><p>Your own parking space on the plot, with a lit path to the guest entrance.</p></article>
-          <article class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 11c4-8 10-8 14 0"/><path d="M7 12c.5 5 2.5 8 5 8s4.5-3 5-8"/><path d="M9 9h.01M15 9h.01"/></svg><h3>Near everything</h3><p>Amsterdam, Utrecht and Amersfoort are around half an hour by car, while Eemnes shops are walkable.</p></article>
-          <article class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 9c2-4 8-4 10 0"/><path d="M5 12c4 6 10 6 14 0"/><path d="M9 12h.01M15 12h.01"/></svg><h3>Hosted with care</h3><p>Rose is a Superhost with a 100% response rate and consistently loved for hospitality and local tips.</p></article>
+          <article class="feature"><span class="number">01</span><h3>Walks from the door</h3><p>The protected bird breeding area begins in front of the house on the dike — best at sunrise or sunset.</p></article>
+          <article class="feature"><span class="number">02</span><h3>Bikes waiting</h3><p>Cycle through forests, polders and wide heaths; restaurants in Laren and Blaricum are within cycling distance.</p></article>
+          <article class="feature"><span class="number">03</span><h3>Cosy in every season</h3><p>Fireplaces, candles, blankets and plenty of firewood make winter stays feel especially warm.</p></article>
+          <article class="feature"><span class="number">04</span><h3>Private parking</h3><p>Your own parking space on the plot, with a lit path to the guest entrance.</p></article>
+          <article class="feature"><span class="number">05</span><h3>Near everything</h3><p>Amsterdam, Utrecht and Amersfoort are around half an hour by car, while Eemnes shops are walkable.</p></article>
+          <article class="feature"><span class="number">06</span><h3>Hosted with care</h3><p>Rose is a Superhost with a 100% response rate and consistently loved for hospitality and local tips.</p></article>
         </div>
       </div>
     </section>
@@ -160,8 +167,8 @@
     <section id="contact">
       <div class="wrap">
         <div class="contact">
-          <div><p class="kicker">Come stay awhile</p><h2 class="h2">For now, booking goes through Airbnb.</h2><p>Contact details can be added later — a direct email, phone number, WhatsApp, or booking form. Until then, the safest way to ask a question or reserve dates is through the official Airbnb listing.</p><div class="cta-row"><a class="pill light" href="https://www.airbnb.co.uk/rooms/37307562" target="_blank" rel="noopener">Open the Airbnb listing</a><a class="pill light" href="mailto:hello@charmwood.nl?subject=Charmwood%20cottage%20enquiry">Draft email placeholder</a></div></div>
-          <div class="contact-box"><b>Charmwood Cottage</b><br>Eemnes, Utrecht, Netherlands<br><br><b>Good to know</b><br>Check-in after 15:00<br>Checkout before 12:00<br>4 guests maximum<br>Dogs welcome, max 2<br><br><span style="color:#f1dfc8">Placeholder contact: replace later with the owner’s preferred direct details.</span></div>
+          <div><p class="kicker">Come stay awhile</p><h2 class="h2">For now, booking goes through Airbnb.</h2><p class="lead">Contact details can be added later — a direct email, phone number, WhatsApp, or booking form. Until then, the safest way to ask a question or reserve dates is through the official Airbnb listing.</p><div class="cta-row"><a class="button secondary" href="https://www.airbnb.co.uk/rooms/37307562" target="_blank" rel="noopener">Open the Airbnb listing</a><a class="button secondary" href="mailto:hello@charmwood.nl?subject=Charmwood%20cottage%20enquiry">Draft email placeholder</a></div></div>
+          <div class="contact-box"><b>Charmwood Cottage</b><br>Eemnes, Utrecht, Netherlands<br><br><b>Good to know</b><br>Check-in after 15:00<br>Checkout before 12:00<br>4 guests maximum<br>Dogs welcome, max 2<br><br><span style="color:#d9c7b3">Placeholder contact: replace later with the owner’s preferred direct details.</span></div>
         </div>
       </div>
     </section>
